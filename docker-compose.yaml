@@ -1,0 +1,24 @@
+#  https://habr.com/ru/articles/578744/
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: adv_application_db
+    env_file:
+      - ./DB/env/postgres # credentials
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./DB/init:/docker-entrypoint-initdb.d # DB initiation scrip ./DB/init/init.sql
+      - adv_db:/var/lib/postgresql/data
+    networks:
+      - adv_network
+
+volumes:
+  adv_db:
+    name: "adv_db-volume"
+
+networks:
+  adv_network:
+    driver: bridge
+    name: 'adv_app-network'
