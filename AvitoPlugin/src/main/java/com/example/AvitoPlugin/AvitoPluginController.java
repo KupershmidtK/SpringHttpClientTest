@@ -5,8 +5,6 @@ import com.example.AvitoPlugin.model.dto.AdvertisementDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("avito")
 public class AvitoPluginController {

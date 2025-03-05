@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.io.PrintWriter;
 import java.net.URI;
 import java.util.random.RandomGenerator;
 import java.util.regex.Matcher;
